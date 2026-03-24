@@ -1,0 +1,119 @@
+/* Lupe Cred Style Engine v3.0 - Premium Edition */
+
+:root {
+    /* Cores extraídas diretamente da identidade visual (Logo) */
+    --gold: #C49A45;      /* Dourado/Bronze sofisticado */
+    --gold-light: #E3BE73;
+    --navy: #1B365D;      /* Azul marinho corporativo */
+    --navy-dark: #0A1930;
+    --bg-dark: #050C17;   /* Fundo noturno */
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Fonte moderna e legível */
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Background com Gradiente Profundo (Vibe Instituição Financeira) */
+.bg-hero {
+    background: radial-gradient(circle at 50% -20%, var(--navy-dark) 0%, var(--bg-dark) 80%);
+}
+
+.text-gradient-gold {
+    background: linear-gradient(135deg, #FFFFFF 0%, var(--gold-light) 50%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Header Inteligente com Efeito Glassmorphism Premium */
+.glass-header {
+    background: rgba(5, 12, 23, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-header.scrolled {
+    background: rgba(255, 255, 255, 0.98) !important;
+    border-bottom: 3px solid var(--gold) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+}
+
+/* Inversão de cores quando o header fica branco */
+.glass-header.scrolled #nav-links a {
+    color: var(--navy-dark) !important;
+}
+.glass-header.scrolled #nav-links a:hover {
+    color: var(--gold) !important;
+}
+
+/* Cards de Serviços Premium */
+.card-premium {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-premium:hover {
+    border-color: rgba(196, 154, 69, 0.5); /* Borda Dourada Suave */
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Animação Pulso do Botão Principal */
+.btn-pulse {
+    animation: pulse-gold 2.5s infinite;
+}
+
+@keyframes pulse-gold {
+    0% { box-shadow: 0 0 0 0 rgba(196, 154, 69, 0.5); }
+    70% { box-shadow: 0 0 0 20px rgba(196, 154, 69, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(196, 154, 69, 0); }
+}
+
+/* Reveal Animation Suave */
+@keyframes fadeInUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+.reveal { 
+    animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; 
+}
+
+/* FAQ Accordion Suave */
+.faq-answer { 
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--navy);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+}
