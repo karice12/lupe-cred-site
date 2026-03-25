@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const context = btn.getAttribute('data-wa');
             
             // Mensagem persuasiva já pré-escrita para facilitar a vida do Lead
-            const msg = encodeURIComponent(`Olá, equipe ${CONFIG.nome}! Tudo bem? \n\nVi o site de vocês e gostaria de uma consultoria especializada para uma *Simulação de Crédito Personalizada*. \n\n`);
+            const msg = encodeURIComponent(`Olá, equipe ${CONFIG.nome}! Tudo bem? \n\n Gostaria de uma *Simulação de Crédito Personalizada*. \n\n`);
             
             // Abre em nova aba direto no Whats
             window.open(`https://wa.me/${CONFIG.fone}?text=${msg}`, '_blank');
